@@ -1,39 +1,35 @@
 function newStyle() {
-    let newColor = '';
+    let newColour = '#'+Math.floor(Math.random()*16777215).toString(16);
+    let newBGColour = '#'+Math.floor(Math.random()*16777215).toString(16);
     let newFont = ''; 
     let x = Math.floor(Math.random()*7); 
     switch (x){
       case 0:
-        newColor = 'red';
-        newFont = 'Times New Roman'; 
+        newFont = 'Ariel'; 
         break;
       case 1: 
-        newColor = 'blue';
         newFont = 'Florence, cursive'; 
         break;
       case 2:
-        newColor = 'yellow';
         newFont = 'Verdana';
         break; 
       case 3:
-        newColor= 'purple';
         newFont = 'Courier New';
         break
       case 4:
-        newColor = 'cyan';
         newFont = 'Georgia'; 
         break;
       case 5:
-          newColor = 'maroon';
-          newFont = 'Palatino';
+          newFont = 'Helvetica';
           break;
       case 6: 
-          newColor = 'lime';
-          newFont = 'Impact';
+          newFont = 'Comic Sans MS';
           break;
     }
     var elem = document.getElementById("text");
-    elem.style.color = newColor;
-    elem.style.fontFamily = newFont; 
+    elem.style.color = newColour;
+    elem.style.fontFamily = newFont;
+    document.body.style.background = newBGColour;
+   
   }
   
